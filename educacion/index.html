@@ -1,0 +1,53 @@
+---
+layout: "page"
+sitePath:
+  - displayName: Inicio
+    webLink: /
+  - displayName: Informaci&oacute;n
+    webLink: /educacion
+---
+<!-- informacion -->
+<section class="informacion">
+	<!-- CONTAINER -->
+	<div class="container">
+		<!-- ROW -->
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 ">
+				<h1>Educaci&oacute;n</h1>
+				<a name="profesional"></a><h2>Profesional</h2>
+				<ul class="info_list">
+				  {% for post in site.tags.profesional %}
+				    <li>
+				      <a href="{{ post.url }}">{{ post.postTitle }}</a> - {{ post.at }}
+				      {{ post.excerpt }} 
+				    </li>
+				  {% endfor %}
+				</ul>
+				<a name="diplomados"></a><h2>Diplomados</h2>
+				<ul class="info_list">
+				  {% for post in site.tags.diplomados %}
+				    <li>
+				      <a href="{{ post.url }}">{{ post.postTitle }}</a> - {{ post.at }}
+				      {{ post.excerpt }} 
+				    </li>
+				  {% endfor %}
+				</ul>
+				<a name="cursos"></a><h2>Cursos</h2>
+				<ul class="info_list">
+				  {% for post in site.tags.cursos %}
+				    <li>
+				      <a href="{{ post.url }}">{{ post.postTitle }}</a> - {{ post.at }}
+				      {{ post.excerpt }} 
+				    </li>
+				  {% endfor %}
+				</ul>
+			</div>
+		</div><!-- //ROW -->
+		<!-- ROW -->
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 ">
+				<h1>Curr&iacute;culum Vitae</h1>
+			</div>
+		</div><!-- //ROW -->
+	</div><!-- //CONTAINER -->
+</section><!-- //educacion -->

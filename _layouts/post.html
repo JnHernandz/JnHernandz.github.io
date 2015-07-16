@@ -1,0 +1,53 @@
+{% include top.html %}
+
+	<!-- PAGE -->
+	<div id="page">
+
+		<!-- PRELOADER HIDE -->
+		<div class="preloader_hide">
+
+			<!-- PAGE BLOCK -->
+			<div class="page_block">
+
+				<!-- HEADER -->
+				<header>
+					{% include header.html %}
+				</header><!-- //HEADER -->
+
+				<!-- BREADCRUMBS -->
+				<section class="full_width breadcrumbs_block clearfix">
+				
+					<!-- CONTAINER -->
+					<div class="container">
+						<div class="breadcrumbs_content">
+							<h2 class="pull-left">{{ page.sectionName }}</h2>
+							<ol class="pull-right breadcrumb">
+								{% for path in page.sitePath %}
+								<li><a href="{{ path.webLink }}">{{ path.displayName }}</a></li>
+								{% endfor %}
+							</ol>
+						</div>
+					</div><!-- //CONTAINER -->
+					<div class="overlay"></div>
+					<div class="overlay_black"></div>
+				</section><!-- //BREADCRUMBS -->
+				<!-- informacion -->
+				<section class="informacion">
+					<!-- CONTAINER -->
+					<div class="container">
+						<!-- ROW -->
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 ">
+								<h3>{{ page.postTitle }}</h3>
+								{{ content }}
+							</div>
+						</div><!-- //ROW -->
+					</div><!-- //CONTAINER -->
+				</section><!-- //educacion -->
+				{% include footer.html %}
+
+			</div><!-- //PAGE BLOCK -->
+		</div><!-- //PRELOADER HIDE -->
+	</div><!-- //PAGE -->
+</body>
+</html>

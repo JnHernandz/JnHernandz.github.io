@@ -1,0 +1,29 @@
+exclude: [old]
+timezone: America/Bogota
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "educacion"
+      type: "pages"
+    values:
+      layout: "page" # overrides previous default layout
+      sectionName: "Formaci&oacute;n Acad&eacute;mica y Experiencia"
+  -
+    scope:
+      path: "educacion"
+      type: "posts"
+    values:
+      layout: "post"
+      sectionName: "Formaci&oacute;n Acad&eacute;mica y Experiencia"
+      sitePath:
+        - displayName: Inicio
+          webLink: /
+        - displayName: Informaci&oacute;n
+          webLink: /educacion
+        - displayName: Profesional
+          webLink: "/educacion/#profesional"
